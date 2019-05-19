@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import Service from '@/components/Service'
 import Bootstrap from '@/components/Bootstrap'
 import User from '@/components/User'
+import Moon from '@/components/Moon'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/user',
       name: 'User',
       component: User
+    },
+    {
+      path: '/🌚',
+      name: 'Moon',
+      component: Moon
     }
   ]
 })
