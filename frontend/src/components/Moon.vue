@@ -1,9 +1,24 @@
 <template>    
     <div>
         <h1>This is the Moon</h1>
-        <img src="https://img-new.cgtrader.com/items/135509/moon_4k_3d_model_obj_3ds_fbx_blend_dae_c7b2ccd5-d1f5-4996-84e0-55f2d18368b3.png" />
+        <img @click="animateMoon()" src="https://img-new.cgtrader.com/items/135509/moon_4k_3d_model_obj_3ds_fbx_blend_dae_c7b2ccd5-d1f5-4996-84e0-55f2d18368b3.png" />
     </div>
 </template>
+
+<script>
+  var f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
+  export default {
+    name: "moon",
+    methods: {
+      animateMoon: function loop() {
+        location.hash = f[Math.floor((Date.now()/100)%f.length)];
+        setTimeout(loop, 75);
+      }
+    }
+  }
+  // loop();
+</script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
