@@ -5,6 +5,8 @@ import Service from '@/components/Service'
 import Bootstrap from '@/components/Bootstrap'
 import User from '@/components/User'
 import Moon from '@/components/Moon'
+import Game from '@/components/Game'
+import Sun from '@/components/Sun'
 
 Vue.use(Router)
 
@@ -34,6 +36,16 @@ export default new Router({
       path: '/🌚',
       name: 'Moon',
       component: Moon
+    },
+    {
+      path: '/🎮',
+      name: 'Game',
+      component: Game
+    },
+    {
+      path: '/sun',
+      name: 'Sun',
+      component: Sun
     }
   ]
 })
